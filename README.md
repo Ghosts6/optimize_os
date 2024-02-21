@@ -2,7 +2,7 @@
 
 # optimize
 
-Inside this repo i place two c++ file to optimize linux and windows os,with help of this file you can optimize your system and make it faster just remind that for using this file you need admin access for windows you need run it as administrator and for linux you need password cuz command run on sudo and for compile codes  you can use this commands 'gpp -o optimize optimize.cpp' or 'g++ -o optimize optimize.cpp' and then you can run it
+Inside this repo i place two c++ file to optimize linux and windows os,with help of this file you can optimize your system and make it faster just remind that for using this file you need admin access for windows you need run it as administrator and for linux you need password cuz command run on sudo and for compile codes  you can use this commands 'gpp -o optimize optimize.cpp' or 'g++ -o optimize optimize.cpp' and then you can run it,i also create python code which do same thing for linux but with a bit extra feature
 
 # 💻windows:
 
@@ -201,4 +201,70 @@ DistributionType getDistributionType() {
 
     return UNKNOWN;
 }
+```
+
+# ![Python](https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54)Optimize.py
+
+this python code will run update command for linux distribtions just like c++ code but differend is this code also provide log file
+which we can access it in same directory and give os data like date,os,kernal and etc  
+```python
+import subprocess
+import platform
+import os
+from datetime import datetime
+
+def run_command(command):
+    process = subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True)
+    output, error = process.communicate()
+    return output.decode(), error.decode()
+
+def system_info():
+    system_info = {
+        "Date": str(datetime.now()),
+        "Platform": platform.system(),
+        "Release": platform.release(),
+        "Version": platform.version(),
+        "Architecture": platform.architecture(),
+        "Processor": platform.processor(),
+    }
+    return system_info
+
+def log_data(log_data):
+    with open("log.txt", "a") as log_file:
+        for key, value in log_data.items():
+            log_file.write(f"{key}: {value}\n")
+        log_file.write("\n")
+
+def main():
+    distro_info, _ = run_command("lsb_release -a")
+    print("Distro Info:")
+    print(distro_info)
+
+    system_info = system_info()
+    print("\nSystem Info:")
+    for key, value in system_info.items():
+        print(f"{key}: {value}")
+
+    log_data(system_info)
+
+    distro_info_lower = distro_info.lower()
+    
+    if "debian" in distro_info_lower or "ubuntu" in distro_info_lower or "mint" in distro_info_lower:
+        print("\nRunning commands for Debian-based system:")
+        run_command("sudo apt update && sudo apt upgrade -y && sudo apt autoremove -y")
+
+    elif "redhat" in distro_info_lower or "centos" in distro_info_lower:
+        print("\nRunning commands for Red Hat-based system:")
+        run_command("sudo yum update -y && sudo yum upgrade -y && sudo yum autoremove -y")
+
+    elif "arch" in distro_info_lower:
+        print("\nRunning commands for Arch Linux:")
+        run_command("sudo pacman -Syu --noconfirm")
+
+    else:
+        print("\nError,unsupported os.")
+
+if __name__ == "__main__":
+    main()
+
 ```
