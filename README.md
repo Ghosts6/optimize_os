@@ -4,6 +4,9 @@
 
 Inside this repo i place two c++ code and python code to optimize linux and windows os,with help of this files you can optimize your system and make it faster just remind that for using this file you need admin access for windows you need run it as administrator and for linux you need password cuz command run on sudo and for compile codes  you can use this commands 'gpp -o optimize optimize.cpp' or 'g++ -o optimize optimize.cpp' and then you can run it,i also create python code which do same thing for linux but with a bit extra feature
 
+![technology-1283624](https://github.com/Ghosts6/optimize_os/assets/95994481/bdcb655c-64b8-4254-851b-95ca4cfafcde)
+
+
 # 💻windows:
 
 For windows we use command like sfc ,dism ,del , sconfig and cleanmgr to scan and fix problem and also update os and near them we will remove temp file to optimize system
