@@ -273,7 +273,7 @@ if __name__ == "__main__":
 ```
 # Cmd:
 
-i also place folder  `cmd/' for my cmd scripts that i wrote them  when i was part of it team and i use them to improve my efficiency at work and its include script like optimize,update and etc 
+i also place folder `cmd/` for my cmd scripts that i wrote them  when i was part of it team and i use them to improve my efficiency at work and its include script like optimize,update and etc 
 
 optimize:
 ```cmd
