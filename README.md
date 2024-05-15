@@ -206,7 +206,7 @@ DistributionType getDistributionType() {
 }
 ```
 
-# ![Python](https://img.shields.io/badge/python-3670A0?style=plastic&logo=python&logoColor=ffdd54)Optimize.py
+# Optimize.py
 
 this python code will run update command for linux distribtions just like c++ code but differend is this code also provide log file
 which we can access it in same directory and give os data like date,os,kernal and etc  
@@ -271,7 +271,7 @@ if __name__ == "__main__":
     main()
 
 ```
-### Cmd:
+# Cmd:
 
 i also place folder  `cmd/' for my cmd scripts that i wrote them  when i was part of it team and i use them to improve my efficiency at work and its include script like optimize,update and etc 
 
