@@ -303,4 +303,6 @@ sfc /scannow >nul 2>&1
 echo System File Cleanup completed.
 
 echo System optimization complete.
+
+pause
 ```
