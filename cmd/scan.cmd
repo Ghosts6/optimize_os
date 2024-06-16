@@ -13,3 +13,5 @@ if %errorlevel% eq 0 (
 )
 
 echo Scan complete.
+
+pause

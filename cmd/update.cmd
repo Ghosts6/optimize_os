@@ -27,3 +27,6 @@ if /i "%choice%"=="Y" (
 ) else (
     echo Please reboot your system to apply changes.
 )
+
+pause
+

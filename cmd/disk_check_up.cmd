@@ -18,6 +18,11 @@ echo Running Disk Defragmentation...
 defrag C: /v >nul 2>&1
 echo Disk Defragmentation completed.
 
+REM Run Check Disk
+echo Running Check Disk...
+chkdsk C: /f /r /x
+echo Check Disk completed.
+
 REM Run System File Cleanup
 echo Running System File Cleanup...
 sfc /scannow >nul 2>&1

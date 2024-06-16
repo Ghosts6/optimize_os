@@ -10,3 +10,5 @@ ipconfig /renew
 echo DNS resolver cache flushed successfully.
 
 echo DNS cache flush complete.
+
+pause
