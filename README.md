@@ -307,10 +307,11 @@ echo System optimization complete.
 pause
 ```
 # 🛠️ Fixing apt & dpkg:
-# This script attempts to fix any issues with apt or dpkg on your system.
-# To use this script:
-# 1. Make it executable: chmod +x fix-apt-dpkg-issues.sh
-# 2. Run the script: ./fix-apt-dpkg-issues.sh
+
+This script attempts to fix any issues with apt or dpkg on your system.
+To use this script:
+1. Make it executable: chmod +x fix-apt-dpkg-issues.sh
+2. Run the script: ./fix-apt-dpkg-issues.sh
 
 ```sh
 #!/bin/bash
